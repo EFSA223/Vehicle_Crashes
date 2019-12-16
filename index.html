@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Louisiana Vegetation Types 2013</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin:0;
+        padding:0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+      }
+      #map {
+        position:absolute;
+        top:0; bottom:0;
+        width:100%;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+        h2 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #180bd4;
+      }
+
+      #console {
+        position: absolute;
+        width: 240px;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: white;
+      }
+
+    </style>
+</head>
+<body>
+<div id='map'></div>
+<div id='console'>
+    <h1>Maryland Statewide Vehicle Crashes</h1>
+    <p>Data: <a href='https://catalog.data.gov/dataset?tags=vehicle'>Motor vehicle Crashes</a> in Maryland, First qrt 2018</p>
+</div>
+    
+
+<script>
+
+mapboxgl.accessToken = "pk.eyJ1IjoiZWYtc2FtYm8iLCJhIjoiY2syczR4eWtuMDZjcDNjbzM0eGhoaHB0MyJ9.3-yTH_cLheshPQa_n8zHgw";
+
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/light-v10', // My stylesheet location
+center: [-76.9921, 39.1556], // starting position [lng, lat]
+zoom: 7 // starting zoom
+});
+
+</script>
+
+</body>
+</html>
